@@ -1,0 +1,213 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HibernateAudit",
+		"_postman_id": "e6f83c97-c994-7f84-6428-5fbd8d00e993",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[user] save",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8090/user/save-user",
+					"request": {
+						"url": "http://localhost:8090/user/save-user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"HsuWai\",\n\t\"email\": \"hsuwai@gmail.com\",\n\t\"password\": \"admin\",\n\t\"enabled\" : true\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8090/user/save-user",
+					"request": {
+						"url": "http://localhost:8090/user/save-user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"ThinEi\",\n\t\"email\": \"thinei@gmail.com\",\n\t\"password\": \"admin\",\n\t\"enabled\" : true\n}"
+						},
+						"description": "http://localhost:8090/user/save-user"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "[user] update",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8090/user/update-user",
+					"request": {
+						"url": "http://localhost:8090/user/update-user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : 1,\n\t\"username\": \"HsuWaiWai\",\n\t\"email\": \"snow.swwt@gmail.com\",\n\t\"password\": \"admin\",\n\t\"enabled\" : true\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8090/user/update-user",
+					"request": {
+						"url": "http://localhost:8090/user/update-user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : 2,\n\t\"username\": \"ThinEiSan\",\n\t\"email\": \"snow.swwt@gmail.com\",\n\t\"password\": \"admin\",\n\t\"enabled\" : true\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "[user] delete",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8090/user/delete-user?id=1",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8090/user/delete-user?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"user",
+								"delete-user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8090/user/delete-user?id=2",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8090/user/delete-user?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"user",
+								"delete-user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8090/user/find-by-user?id=1",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8090/user/find-by-user?username=HsuWai",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"user",
+						"find-by-user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "HsuWai",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8090/user/find-all-users",
+			"request": {
+				"url": "http://localhost:8090/user/find-all-users",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
